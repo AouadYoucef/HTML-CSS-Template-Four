@@ -1,0 +1,131 @@
+/* Start Global rules */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.page {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* End Global rules */
+
+/* Start Sidebar */
+
+
+.page .sidebar {
+    background-color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 215px;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.page .sidebar>h3 {
+    position: relative;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.page .sidebar>h3:before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: black;
+}
+
+.page .sidebar>h3:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%,45%);
+    width: 12px;
+    height: 12px;
+    border-radius:50% ;
+    border: 5px solid white;
+    background-color: black;
+
+    z-index: 1;
+}
+
+.page .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    border-radius: 6px;
+    padding: 10px;
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+.page .sidebar ul li a:hover,
+.page .sidebar ul li a.active {
+    background-color: #f6f6f6;
+}
+
+.page .sidebar ul li span {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+@media (max-width:767px) {
+    .page .sidebar {
+        width: fit-content;
+        padding: 10px;
+    }
+
+    .page .sidebar>h3 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .page .sidebar>h3::before {
+        display: none;
+    }
+
+    .page .sidebar>h3::after {
+        display: none;
+    }
+
+    .page .sidebar ul li span {
+        display: none;
+    }
+
+    .page .sidebar ul li a {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    
+}
+
+/* End Sidebar */

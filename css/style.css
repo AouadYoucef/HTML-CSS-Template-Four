@@ -222,14 +222,24 @@ ul {
     align-items: center;
 }
 
-.page .content .head .icons .notification i {
-    position: relative;
-    margin-right: 15px;
+.page .content .head .icons .icon {
+    background-color: white;
+    width: fit-content;
+    margin-right: 10px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    transition: 0.3s;
 }
 
-.page .content .head .icons span i:hover {
-    background-color: grey;
+.page .content .head .icons .icon:has(> i:hover) {
+    background-color: #f5f5f5;
 }
+
+.page .content .head .icons .notification i {
+    position: relative;
+    cursor: pointer;
+}
+
 
 .page .content .head .icons span i::after {
     content: "";
@@ -246,6 +256,7 @@ ul {
 .page .content .head .icons span img {
     max-width: 30px;
 }
+
 
 .page .content h1 {
     position: relative;
@@ -369,3 +380,66 @@ ul {
 }
 
 /* End Welcome  */
+
+/* Start Quick Draft  */
+
+.wrapper .quick-draft {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapper .quick-draft h2 {
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.wrapper .quick-draft p {
+    margin: 10px 20px 20px 20px ;
+    font-size: 15px;
+    color: var(--grey-color);
+}
+
+.wrapper .quick-draft form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    height: 300px;
+}
+
+.wrapper .quick-draft form .text {
+    padding: 10px;
+    outline: none;
+    border-radius: 6px;
+    border: 0;
+    background-color: #eee;
+    margin-bottom: 15px;
+}
+
+.wrapper .quick-draft form textarea {
+    outline: none;
+    padding: 10px;
+    border: none;
+    background-color: #eee;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    height: 62%;
+    resize: none;
+}
+
+.wrapper .quick-draft form .save {
+    border: none;
+    color: white;
+    background-color:var(--blue-color);
+    cursor: pointer;
+    width: fit-content;
+    margin: 10px 0 0 auto;
+    transition: 0.3s;
+}
+
+.wrapper .quick-draft form .save:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* Start Quick Draft  */

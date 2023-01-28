@@ -336,7 +336,7 @@ ul {
 }
 
 
-.welcome > img {
+.welcome>img {
     width: 64px;
     border: 2px solid white;
     padding: 2px;
@@ -375,7 +375,7 @@ ul {
     transition: 0.3s;
 }
 
-.welcome .visit:hover  {
+.welcome .visit:hover {
     background-color: var(--blue-alt-color);
 }
 
@@ -396,7 +396,7 @@ ul {
 }
 
 .wrapper .quick-draft p {
-    margin: 10px 20px 20px 20px ;
+    margin: 10px 20px 20px 20px;
     font-size: 15px;
     color: var(--grey-color);
 }
@@ -418,7 +418,6 @@ ul {
 }
 
 .wrapper .quick-draft form textarea {
-    outline: none;
     padding: 10px;
     border: none;
     background-color: #eee;
@@ -431,7 +430,7 @@ ul {
 .wrapper .quick-draft form .save {
     border: none;
     color: white;
-    background-color:var(--blue-color);
+    background-color: var(--blue-color);
     cursor: pointer;
     width: fit-content;
     margin: 10px 0 0 auto;
@@ -443,3 +442,97 @@ ul {
 }
 
 /* Start Quick Draft  */
+
+
+/* Start Targets */
+
+.targets {
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+}
+.targets h2 {
+    margin: 0;
+}
+
+.targets p {
+    color: var(--grey-color);
+    font-size: 14px;
+    margin: 10px 0 15px;
+}
+
+.targets .target-row .icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.targets .details {
+    flex: 1;
+    height: 80px;
+    padding-top: 10px;
+}
+
+.targets .details .progress {
+    height: 4px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.targets .details .progress>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+ }
+
+ .targets .details .progress>span span {
+    position: absolute;
+    right: -18px;
+    top: -35px;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 3px 5px;
+ }
+
+.targets .details .progress>span span::before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    border-color: var(--blue-color) transparent transparent transparent;
+    border-style: solid;
+    border-width: 6px;
+}
+
+.targets .details .progress>span.green span::before{
+    border-color: var(--green-color) transparent transparent transparent;
+}
+
+.targets .details .progress>span.orange span::before{
+    border-color: var(--orange-color) transparent transparent transparent;
+}
+
+.targets .details .progress>span span::after {
+    content: "";
+}
+
+.blue .icon,
+.blue .progress {
+    background-color: rgb(0, 117, 255, 20%);
+}
+
+.orange .icon,
+.orange .progress {
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.green .icon, .green .progress{
+    background-color: rgb(034 197 94 /20%);
+}
+
+
+/* End Targets */

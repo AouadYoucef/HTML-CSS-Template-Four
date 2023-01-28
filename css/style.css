@@ -557,6 +557,12 @@ ul {
     height: 75%;
 }
 
+@media (max-width:1199px) {
+    .tickets .boxes {
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr)); 
+    }
+}
+
 .tickets .boxes .box {
 display: flex;
 flex-direction: column;

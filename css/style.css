@@ -458,7 +458,7 @@ ul {
 .targets p {
     color: var(--grey-color);
     font-size: 14px;
-    margin: 10px 0 15px;
+    margin: 10px 0 20px;
 }
 
 .targets .target-row .icon {
@@ -470,7 +470,7 @@ ul {
 .targets .details {
     flex: 1;
     height: 80px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .targets .details .progress {
@@ -536,3 +536,50 @@ ul {
 
 
 /* End Targets */
+
+/* Start Tickets */
+
+.tickets h2 {
+    margin: 0;
+}
+
+.tickets p {
+    
+    color: var(--grey-color);
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+.tickets .boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    gap: 15px;
+    height: 75%;
+}
+
+.tickets .boxes .box {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 1px solid #ccc;
+border-radius: 10px;
+padding: 20px;
+}
+
+.tickets .boxes .box i {
+    font-size: 28px;
+}
+
+
+.tickets .boxes .box span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tickets .boxes .box p {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+/* End Tickets */

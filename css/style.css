@@ -287,7 +287,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 20px;
-    margin: 0 20px;
+    margin: 0 20px 20px;
 }
 
 @media (max-width:767px) {
@@ -652,7 +652,7 @@ ul {
 
 
 /* Start Tasks */
-.tasks h2{
+.tasks h2 {
     margin-bottom: 15px;
 }
 
@@ -666,19 +666,18 @@ ul {
     padding-bottom: 15px;
 }
 
-.tasks .task-row:not(:first-child) {
-
-}
+.tasks .task-row:not(:first-child) {}
 
 .tasks .task-row:nth-child(5) {
     opacity: 30%;
 }
+
 .tasks .task-row .info {
     flex-grow: 1;
 }
 
-.tasks .task-row .info h3{
-margin-bottom: 5px;
+.tasks .task-row .info h3 {
+    margin-bottom: 5px;
 }
 
 .tasks .task-row .icon i {
@@ -702,3 +701,157 @@ margin-bottom: 5px;
 /* All of the work was done in inline styling using the framework */
 /* Start Top Search Words */
 
+/* Start Latest Uploads */
+.latest-uploads ul li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.latest-uploads ul li:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+.latest-uploads ul li:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.latest-uploads ul li>div:first-of-type {
+    display: flex;
+    flex-grow: 1;
+
+}
+
+.latest-uploads ul li>div img {
+    width: 40px;
+}
+
+.latest-uploads ul li>div:nth-of-type(2) {
+    height: fit-content;
+}
+
+/* End Latest Uploads */
+
+/* Start Last Project Progress  */
+.last-project {
+    position: relative;
+}
+
+.last-project ul:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 11px;
+    background-color: var(--blue-color);
+    width: 2px;
+    height: 100%;
+}
+
+@media (max-width:412px) {
+    .last-project ul:before {
+        height: 90%;
+    }
+}
+
+.last-project ul li:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    margin-right: 15px;
+    z-index: 2;
+}
+
+.last-project ul li.done:before {
+    background-color: var(--blue-color);
+}
+
+.last-project ul li.current:before {
+    content: "";
+    animation: flash 0.8s alternate infinite;
+}
+
+@keyframes flash {
+    0% {
+        background-color: var(--blue-color);
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+.last-project .launch-icon {
+    position: absolute;
+    width: 160px;
+    bottom: 10px;
+    right: 0;
+    opacity: 0.1;
+}
+
+/* End Last Project Progress  */
+
+/* Start Reminders */
+.reminders .item {
+    display: flex;
+    margin-bottom: 15px;
+}
+.reminders .item .ball-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reminders .item .ball-holder .ball {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.reminders .item .info {
+    flex-grow: 1;
+    padding: 0 15px;
+    border-left:2px solid;
+
+}
+.reminders .item:first-of-type .info {
+    border-color: var(--blue-color);
+}
+
+.reminders .item:nth-of-type(2) .info {
+    border-color: var(--green-color);
+}
+
+.reminders .item:nth-of-type(3) .info {
+    border-color: gold;
+}
+
+.reminders .item:nth-of-type(4) .info {
+    border-color: var(--red-color);
+}
+
+.reminders .item:first-of-type .ball-holder .ball {
+    background-color: var(--blue-color);
+}
+
+.reminders .item:nth-of-type(2) .ball-holder .ball {
+    background-color: var(--green-color);
+}
+
+.reminders .item:nth-of-type(3) .ball-holder .ball {
+    background-color: gold;
+}
+
+.reminders .item:nth-of-type(4) .ball-holder .ball {
+    background-color: var(--red-color);
+}
+.reminders .item .info span:first-child {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* End Reminders */

@@ -451,6 +451,7 @@ ul {
     border-radius: 6px;
     padding: 20px;
 }
+
 .targets h2 {
     margin: 0;
 }
@@ -484,9 +485,9 @@ ul {
     top: 0;
     left: 0;
     height: 100%;
- }
+}
 
- .targets .details .progress>span span {
+.targets .details .progress>span span {
     position: absolute;
     right: -18px;
     top: -35px;
@@ -494,7 +495,7 @@ ul {
     font-size: 14px;
     border-radius: 6px;
     padding: 3px 5px;
- }
+}
 
 .targets .details .progress>span span::before {
     content: "";
@@ -508,11 +509,11 @@ ul {
     border-width: 6px;
 }
 
-.targets .details .progress>span.green span::before{
+.targets .details .progress>span.green span::before {
     border-color: var(--green-color) transparent transparent transparent;
 }
 
-.targets .details .progress>span.orange span::before{
+.targets .details .progress>span.orange span::before {
     border-color: var(--orange-color) transparent transparent transparent;
 }
 
@@ -530,7 +531,8 @@ ul {
     background-color: rgb(245 158 11 / 20%);
 }
 
-.green .icon, .green .progress{
+.green .icon,
+.green .progress {
     background-color: rgb(034 197 94 /20%);
 }
 
@@ -544,7 +546,6 @@ ul {
 }
 
 .tickets p {
-    
     color: var(--grey-color);
     font-size: 14px;
     margin: 10px 0 20px;
@@ -552,25 +553,31 @@ ul {
 
 .tickets .boxes {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 15px;
     height: 75%;
 }
 
 @media (max-width:1199px) {
     .tickets .boxes {
-        grid-template-columns: repeat(auto-fill,minmax(350px,1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width:767px) {
+    .tickets .boxes {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
 .tickets .boxes .box {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border: 1px solid #ccc;
-border-radius: 10px;
-padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .tickets .boxes .box i {
@@ -589,3 +596,90 @@ padding: 20px;
 }
 
 /* End Tickets */
+
+/* Start Latest News  */
+@media (max-width:767px) {
+    .latest-news {
+        text-align: center;
+    }
+}
+
+.latest-news h2 {
+    margin: 0 0 15px 0;
+}
+
+.latest-news .news-row {
+    width: 100%;
+}
+
+.latest-news .news-row:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.latest-news .news-row:not(:first-child) {
+    margin-bottom: 20px;
+}
+
+.latest-news .news-row img {
+    width: 100px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.latest-news .news-row .info {
+    flex-grow: 1;
+}
+
+.latest-news .news-row .info h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+@media (max-width:767px) {
+    .latest-news .news-row {
+        display: block;
+    }
+
+    .latest-news .news-row .label {
+        margin: 10px auto;
+        width: fit-content;
+    }
+}
+
+/* End Latest News  */
+
+
+/* Start Tasks */
+.tasks h2{
+    margin-bottom: 15px;
+}
+
+.tasks .task-row {
+    display: flex;
+    margin-top: 15px;
+}
+
+.tasks .task-row:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.tasks .task-row:not(:first-child) {
+
+}
+
+.tasks .task-row:nth-child(5) {
+    opacity: 30%;
+}
+.tasks .task-row .info {
+    flex-grow: 1;
+}
+
+.tasks .task-row .info h3{
+margin-bottom: 5px;
+}
+
+/* Start Tasks */
+

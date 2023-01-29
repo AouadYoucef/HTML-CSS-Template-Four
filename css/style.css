@@ -605,7 +605,7 @@ ul {
 }
 
 .latest-news h2 {
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
 }
 
 .latest-news .news-row {
@@ -696,11 +696,9 @@ margin-bottom: 5px;
     cursor: pointer;
 }
 
-/* .tasks .task-row .icon {
-    width: fit-content;
-    height: fit-content;
-    background-color: red;
-} */
-
 /* Start Tasks */
+
+/* Start Top Search Words */
+/* All of the work was done in inline styling using the framework */
+/* Start Top Search Words */
 

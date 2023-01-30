@@ -800,6 +800,7 @@ ul {
     display: flex;
     margin-bottom: 15px;
 }
+
 .reminders .item .ball-holder {
     display: flex;
     justify-content: center;
@@ -816,9 +817,10 @@ ul {
 .reminders .item .info {
     flex-grow: 1;
     padding: 0 15px;
-    border-left:2px solid;
+    border-left: 2px solid;
 
 }
+
 .reminders .item:first-of-type .info {
     border-color: var(--blue-color);
 }
@@ -850,10 +852,12 @@ ul {
 .reminders .item:nth-of-type(4) .ball-holder .ball {
     background-color: var(--red-color);
 }
+
 .reminders .item .info span:first-child {
     margin-bottom: 10px;
     font-weight: bold;
 }
+
 /* End Reminders */
 
 /* Start Latest Post */
@@ -870,6 +874,7 @@ ul {
     text-transform: capitalize;
     min-height: 140px;
 }
+
 /* End Latest Post */
 
 /* Start Social Media */
@@ -885,6 +890,7 @@ ul {
     width: 52px;
     transition: 0.3s;
 }
+
 .social-media .box i:hover {
     transform: rotate(5deg);
 }
@@ -900,27 +906,27 @@ ul {
 }
 
 .social-media .facebook {
-    background-color: rgb(24, 119, 242 , 20%);
+    background-color: rgb(24, 119, 242, 20%);
     color: #1da1f2;
 }
 
 .social-media .facebook i,
-.social-media .facebook  a {
+.social-media .facebook a {
     background-color: #1da1f2;
 }
 
 .social-media .youtube {
-    background-color: rgb(255, 0, 0 , 20%);
+    background-color: rgb(255, 0, 0, 20%);
     color: #ff0000;
 }
 
 .social-media .youtube i,
 .social-media .youtube a {
-    background-color:#ff0000 ;
+    background-color: #ff0000;
 }
 
 .social-media .linkedin {
-    background-color: rgb(0, 119, 181,20%);
+    background-color: rgb(0, 119, 181, 20%);
     color: #0077b5;
 }
 
@@ -928,4 +934,54 @@ ul {
 .social-media .linkedin a {
     background-color: #0077b5;
 }
+
 /* End Social Media */
+
+/* Start Project Table  */
+.projects .responsive-table {
+    overflow-x: auto;
+}
+
+.projects table {
+    min-width: 1000px;
+}
+
+.projects table td {
+    padding: 15px;
+}
+
+.projects thead td {
+    background-color: #eee;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.projects tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+
+}
+
+.projects table tbody tr td:last-child {
+    border-right: 1px solid #eee;
+}
+.projects tbody tr:hover td {
+background-color: #faf7f7;
+}
+.projects table img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+}
+
+.projects table img:not(:first-child) {
+    margin-left: -20px;
+}
+
+.projects table span {
+    font-size: 13px;
+}
+
+/* End Project Table  */

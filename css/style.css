@@ -965,9 +965,11 @@ ul {
 .projects table tbody tr td:last-child {
     border-right: 1px solid #eee;
 }
+
 .projects tbody tr:hover td {
-background-color: #faf7f7;
+    background-color: #faf7f7;
 }
+
 .projects table img {
     width: 32px;
     height: 32px;
@@ -985,3 +987,226 @@ background-color: #faf7f7;
 }
 
 /* End Project Table  */
+
+/* Start Settings */
+
+.settings-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width:767px) {
+    .settings-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin: 0 10px;
+        gap: 10px;
+    }
+}
+
+.settings-page .close-message {
+    /* border: 1px solid #ccc; */
+    resize: none;
+    min-height: 160px;
+    margin-top: 20px;
+}
+
+.settings-page .button {
+    cursor: pointer;
+}
+
+.sec-box .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.sec-box .box .change {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sec-box .box .change:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.sec-box .box .devices {
+    cursor: pointer;
+}
+
+.settings-page .social-boxes i {
+    display: flex;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: 0.3s;
+}
+
+.settings-page .social-boxes input {
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.settings-page .social-boxes .add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    font-size: 14px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 0 6px 6px 0;
+    height: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.settings-page .social-boxes>.twitter:focus-within i {
+    color: #1da1f2;
+}
+
+.settings-page .social-boxes>.twitter:focus-within .add {
+    background-color: #1da1f2;
+    color: white;
+    border: 1px solid #1da1f2;
+}
+
+.settings-page .social-boxes>.facebook:focus-within i {
+    color: #1877f2;
+}
+
+.settings-page .social-boxes>.facebook:focus-within .add {
+    background-color: #1877f2;
+    color: white;
+    border: 1px solid #1877f2;
+}
+
+.settings-page .social-boxes>.linkedin:focus-within i {
+    color: #0077b5;
+}
+
+.settings-page .social-boxes>.linkedin:focus-within .add {
+    background-color: #0077b5;
+    color: white;
+    border: 1px solid #0077b5;
+}
+
+.settings-page .social-boxes>.youtube:focus-within i {
+    color: #ff0000;
+}
+
+.settings-page .social-boxes>.youtube:focus-within .add {
+    background-color: #ff0000;
+    color: white;
+    border: 1px solid #ff0000;
+}
+
+.widgets-control .control label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.widgets-control .control label:hover::before {
+    border-color:var(--blue-color);
+}
+
+.widgets-control .control label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+    margin-top: -9px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.widgets-control .control label::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.widgets-control .control input[type="checkbox"] {
+    appearance: none;
+}
+
+.widgets-control .control input[type="checkbox"]:checked+label::after {
+    transform: scale(1) rotate(-1turn);
+
+}
+
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    content: "\f00c";
+    left: 50px;
+    color: var(--blue-color);
+}
+
+
+.settings-page :disabled {
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+
+
+/* End Settings */

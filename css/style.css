@@ -1111,7 +1111,7 @@ ul {
 }
 
 .widgets-control .control label:hover::before {
-    border-color:var(--blue-color);
+    border-color: var(--blue-color);
 }
 
 .widgets-control .control label::before {
@@ -1155,6 +1155,91 @@ ul {
 .widgets-control .control input[type="checkbox"]:checked+label::after {
     transform: scale(1) rotate(-1turn);
 
+}
+
+.backup-control .date input[type="radio"] {
+    appearance: none;
+}
+
+.backup-control .date label {
+    position: relative;
+    padding-left: 35px;
+    padding-top: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.backup-control .date label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.backup-control .date label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 28%;
+    transform: translateY(-80%);
+    background-color: var(--blue-color);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.backup-control .date input[type="radio"]:checked+label::before {
+    border-color: var(--blue-color);
+}
+
+.backup-control .date input[type="radio"]:checked+label::after {
+    transform: scale(1);
+}
+
+.backup-control .servers {
+    border-top: 1px solid #eee;
+}
+
+@media (max-width:767px) {
+    .backup-control .servers {
+        flex-wrap: wrap;
+    }
+    .backup-control .servers .server {
+        margin-bottom: 0px;
+    }
+}
+
+.backup-control .servers input[type="radio"] {
+    appearance: none;
+}
+
+.backup-control .servers .server {
+    border: 2px solid #eee;
+    transition: 0.1s;
+}
+
+
+.backup-control .servers input[type="radio"]:checked + .server {
+    border-color: var(--blue-color);
+}
+
+.backup-control .servers input[type="radio"]:checked + .server label {
+    color: var(--blue-color);
+}
+
+
+.backup-control .servers .server label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .toggle-checkbox {

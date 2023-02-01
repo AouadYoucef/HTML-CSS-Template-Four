@@ -1542,9 +1542,9 @@ ul {
 
 @media (max-width: 767px) {
     .projects-page .project .do {
-      flex-direction: column;
+        flex-direction: column;
     }
-  }
+}
 
 .projects-page .project .do span {
     padding: 3px 8px;
@@ -1592,3 +1592,50 @@ ul {
 }
 
 /* End Projects Page */
+
+/* Start Courses Page */
+.courses-page {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.courses-page .course {
+    overflow: hidden;
+    position: relative;
+}
+
+.courses-page .course .course-img {
+    width: 100%;
+}
+
+.courses-page .course .prof-img {
+    width: 64px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 2px solid white;
+}
+
+.courses-page .course .course-info {
+    border-bottom: 1px solid #eee;
+}
+
+.courses-page .course .course-info p {
+    line-height: 1.4;
+    padding-bottom: 15px;
+}
+
+.courses-page .course .course-info .span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.courses-page .course .course-info .span:hover {
+    background-color: var(--blue-alt-color);
+}
+.courses-page .course .price-info {
+    padding: 15px;
+}
+/* End Courses Page */

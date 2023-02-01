@@ -128,12 +128,24 @@
   margin-top: 25px;
 }
 
+.mr-5 {
+  margin-right: 5px;
+}
+
 .mr-10 {
   margin-right: 10px;
 }
 
 .mr-15 {
   margin-right: 15px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.ml-10 {
+  margin-left: 10px;
 }
 
 .mb-0 {

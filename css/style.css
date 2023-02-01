@@ -1598,6 +1598,14 @@ ul {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
+@media (max-width:767px) {
+    .courses-page {
+        grid-template-columns: minmax(250px, 1fr);
+        gap: 10px;
+        margin: 0 10px;
+    }
+}
+
 .courses-page .course {
     overflow: hidden;
     position: relative;
@@ -1639,3 +1647,84 @@ ul {
     padding: 15px;
 }
 /* End Courses Page */
+
+/* Start Friends Page */
+
+.friends-page {
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+
+@media (max-width:767px) {
+    .friends-page {
+        grid-template-columns:minmax(250px,1fr);
+        gap: 10px;
+        margin: 0;
+        }
+}
+
+.friends-page .friend {
+    position: relative;
+}
+
+.friends-page .contact {
+    width: fit-content;
+}
+
+.friends-page .contact i {
+padding: 10px;
+border-radius: 50%;
+margin-right: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.friends-page .contact i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.friends-page .contact {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.friends-page .info img {
+    width: 100px;
+    margin-top: 15px;
+}
+
+.friends-page .icons {
+    margin-top: 15px;
+    margin: 15px 5px 0;
+    padding: 15px 0px;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+
+.friends-page .icons .vip {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--red-color);
+    opacity: 0.1;
+}
+
+.friends-page .icons div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+@media (max-width:767px) {
+    .friends-page .friend > div:nth-child(4) div {
+        font-size: 12px;
+    }
+}
+
+.friends-page .icons div i {
+    margin-right: 5px;
+}
+/* End Friends Page */
